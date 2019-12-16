@@ -1,11 +1,11 @@
-import {controller, httpGet, httpPost, httpPut, requestBody, requestParam, response} from 'inversify-express-utils';
-import {inject} from 'inversify';
-import TYPES from '../container/types';
-import {IssueService} from '../services/issue.service';
 import {Response} from 'express';
-import {parseObjectId, validate} from '../utils/request.utils';
-import {IIssue} from '../models/issue.model';
 import {body} from 'express-validator';
+import {inject} from 'inversify';
+import {controller, httpGet, httpPost, httpPut, requestBody, requestParam, response} from 'inversify-express-utils';
+import TYPES from '../container/types';
+import {IIssue} from '../models/issue.model';
+import {IssueService} from '../services/issue.service';
+import {parseObjectId, validate} from '../utils/request.utils';
 
 @controller('/issues')
 export class IssuesController {
