@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc && node build/app.js",
-    "tsc:watch": "node ./node_modules/typescript/bin/tsc --watch"
+    "tsc:watch": "node ./node_modules/typescript/bin/tsc --watch",
+    "test": "mocha --require ts-node/register --ui bdd --exit \"tests/**/*.spec.ts\"",
+    "lint:fix": "tslint --fix \"app/**/*.ts\" -t verbose -p tsconfig.json"
+
   },
   "author": "",
   "license": "ISC",
@@ -34,7 +37,7 @@
     "mocha": "^6.2.2",
     "supertest": "4.0.2",
     "ts-node": "8.3.0",
-    "tslint": "^5.20.0",
+    "tslint": "^5.20.1",
     "typescript": "3.5.2"
   }
 }

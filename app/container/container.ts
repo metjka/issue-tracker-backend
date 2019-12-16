@@ -1,8 +1,8 @@
-import TYPES from './types';
 import {Container} from 'inversify';
 import {MongoConnection} from '../db/mongo.connection';
 import {exportUserModel} from '../models/issue.model';
 import {IssueService} from '../services/issue.service';
+import TYPES from './types';
 
 const config = require('../../config.local.json');
 

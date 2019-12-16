@@ -1,7 +1,7 @@
-import {inject, injectable} from 'inversify';
 import {ObjectId} from 'bson';
-import TYPES from '../container/types';
+import {inject, injectable} from 'inversify';
 import {Model} from 'mongoose';
+import TYPES from '../container/types';
 import {IIssue, IIssueModel, IssueStatus} from '../models/issue.model';
 import {ClientError} from '../utils/request.utils';
 
@@ -13,7 +13,7 @@ export class IssueService {
 
   public async getIssues(): Promise<IIssueModel[]> {
     const models = await this.issueModel.find().exec();
-    return models.map(it => it.toJSON());
+    return models.map((it) => it.toJSON());
   }
 
   public async getIssueById(issueId: ObjectId): Promise<IIssue> {

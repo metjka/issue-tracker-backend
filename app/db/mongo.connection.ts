@@ -1,10 +1,10 @@
 import 'reflect-metadata';
 
-import {connect, Connection, connection, Mongoose} from 'mongoose'
-import {IConfig} from "../utils/interfaces";
-import * as mongoose from "mongoose";
-import TYPES from "../container/types";
-import {inject, injectable} from "inversify";
+import {inject, injectable} from 'inversify';
+import {connect, Connection, connection, Mongoose} from 'mongoose';
+import * as mongoose from 'mongoose';
+import TYPES from '../container/types';
+import {IConfig} from '../utils/interfaces';
 
 
 @injectable()

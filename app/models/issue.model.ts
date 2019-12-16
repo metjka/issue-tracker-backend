@@ -1,19 +1,19 @@
-import {Connection, Document, Model, Schema} from 'mongoose';
 import {interfaces} from 'inversify';
+import {Connection, Document, Model, Schema} from 'mongoose';
 import TYPES from '../container/types';
 
 export enum IssueStatus {
   OPEN = 'OPEN',
   PENDING = 'PENDING',
-  CLOSED = 'CLOSED'
+  CLOSED = 'CLOSED',
 }
 
 const issueSchema = new Schema({
   title: {type: String},
   description: {type: String},
-  status: {type: String, required: true, default: IssueStatus.OPEN}
+  status: {type: String, required: true, default: IssueStatus.OPEN},
 }, {
-  timestamps: true
+  timestamps: true,
 });
 
 export interface IIssue {

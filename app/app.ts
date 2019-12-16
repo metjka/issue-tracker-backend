@@ -1,12 +1,12 @@
 import 'reflect-metadata';
 
-import container from './container/container';
 import * as bodyParser from 'body-parser';
 import {InversifyExpressServer} from 'inversify-express-utils';
+import container from './container/container';
 import TYPES from './container/types';
 import './controllers/issues.controller';
+import {IConfig} from './utils/interfaces';
 import {errorHandler} from './utils/request.utils';
-import {IConfig} from "./utils/interfaces";
 
 const server = new InversifyExpressServer(container, null, {rootPath: '/api'}, null);
 
